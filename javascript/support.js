@@ -1,5 +1,5 @@
 function chargeSeasons() {
-    fetch('/json/season_list.json')
+    fetch('../json/season_list.json')
         .then(response => response.json())
         .then(data => {
             const data_list = document.getElementById('seasons');
