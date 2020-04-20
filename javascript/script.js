@@ -23,7 +23,8 @@ function seasonResults(season) {
 
                 //  Añada la badera del pais como fondo
                 const race_head = createCustomElements('', ['title']);
-                race_head.style.backgroundImage = `url(flags/${race.Circuit.Location.country.split(' ').join('_')}.svg)`;
+                const country = race.Circuit.Location.country.split(' ').join('_');
+                race_head.style.backgroundImage = `url(flags/${country.toLowerCase()}.svg)`;
 
                 //  Añade el Round
                 race_head.appendChild(createCustomElements(race.round, ['square', 'square__black']));
