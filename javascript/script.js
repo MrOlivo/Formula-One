@@ -5,7 +5,7 @@ function seasonResults(season) {
         return;
     }
 
-    const URL = `http://ergast.com/api/f1/${season}/results.json?limit=500&offset=0`;
+    const URL = `https://ergast.com/api/f1/${season}/results.json?limit=500&offset=0`;
 
     //Arrays -> forEach
     //Dictionary -> punto o corchetes
