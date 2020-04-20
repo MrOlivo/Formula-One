@@ -2,6 +2,7 @@ ocultable.html
 tabs.html
 test.html
 
-json/
+json/*
+!json/season_list.json
 
 .DS_Store
