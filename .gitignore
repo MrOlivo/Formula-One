@@ -6,3 +6,5 @@ json/*
 !json/season_list.json
 
 .DS_Store
+
+prepros.config
