@@ -38,7 +38,7 @@ input {
 
 .item {
     background-color: whitesmoke;
-    width: 400 px;
+    width: 400px;
     margin: 0.5em;
     transition-duration: .2s;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.30);

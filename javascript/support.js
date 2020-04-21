@@ -1,5 +1,6 @@
 function chargeSeasons() {
-    fetch('/json/season_list.json')
+    const season_list = 'https://ergast.com/api/f1/seasons.json?limit=100';
+    fetch(season_list)
         .then(response => response.json())
         .then(data => {
             const data_list = document.getElementById('seasons');
