@@ -46,7 +46,7 @@ input {
 
 .item:hover {
     border: none;
-    transform: translateY(-.4em);
+    transform: translateY(-.2em);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.30);
 }
 
