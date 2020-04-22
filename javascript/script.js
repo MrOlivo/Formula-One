@@ -1,4 +1,3 @@
-
 function seasonResults(season) {
 
     if (season.length < 4) {
