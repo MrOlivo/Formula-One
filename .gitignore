@@ -1,10 +1,4 @@
 ocultable.html
-tabs.html
 test.html
 
-json/*
-!json/season_list.json
-
 .DS_Store
-
-prepros.config
