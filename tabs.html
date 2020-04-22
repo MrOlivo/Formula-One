@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Tabs</title>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        /* Style the tab */
+        .tab {
+            float: left;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            width: 30%;
+            height: 500px;
+        }
+
+        .tablinks {
+            font-size: 1em;
+        }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+            display: block;
+            background-color: inherit;
+            color: black;
+            padding: 22px 16px;
+            width: 100%;
+            border: none;
+            outline: none;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            float: left;
+            padding: 0px 12px;
+            border: 1px solid #ccc;
+            width: 70%;
+            border-left: none;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')">
+            <div>London</div>
+            <div></div>
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">
+            <div>Australian Grand Prix</div>
+            <div style="font-size: .8em;">Albert Park Grand Prix Circuit</div>
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+        <button class="tablinks" onclick="openCity(event, 'Beijing')">Beijing</button>
+        <button class="tablinks" onclick="openCity(event, 'CDMX')">CDMX</button>
+    </div>
+
+    <div id="London" class="tabcontent">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+    </div>
+
+    <div id="Paris" class="tabcontent" style="display: none;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Pos</th>
+                    <th>Driver</th>
+                    <th>Constructor</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Bottas, Valtteri</td>
+                    <td>Mercedes</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Hamilton, Lewis</td>
+                    <td>Mercedes</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Verstappen, Max</td>
+                    <td>Red Bull</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Vettel, Sebastian</td>
+                    <td>Ferrari</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Leclerc, Charles</td>
+                    <td>Ferrari</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Magnussen, Kevin</td>
+                    <td>Haas F1 Team</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Hülkenberg, Nico</td>
+                    <td>Renault</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Räikkönen, Kimi</td>
+                    <td>Alfa Romeo</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Stroll, Lance</td>
+                    <td>Racing Point</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Kvyat, Daniil</td>
+                    <td>Toro Rosso</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Gasly, Pierre</td>
+                    <td>Red Bull</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Norris, Lando</td>
+                    <td>McLaren</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Pérez, Sergio</td>
+                    <td>Racing Point</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Albon, Alexander</td>
+                    <td>Toro Rosso</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Giovinazzi, Antonio</td>
+                    <td>Alfa Romeo</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Russell, George</td>
+                    <td>Williams</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Kubica, Robert</td>
+                    <td>Williams</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Grosjean, Romain</td>
+                    <td>Haas F1 Team</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Ricciardo, Daniel</td>
+                    <td>Renault</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Sainz, Carlos</td>
+                    <td>McLaren</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="Tokyo" class="tabcontent" style="display: none;">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <div id="Beijing" class="tabcontent" style="display: none;">
+        <h3>Beijing</h3>
+        <p>Beijing is the capital of China.</p>
+    </div>
+
+    <div id="CDMX" class="tabcontent" style="display: none;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Pos</th>
+                    <th>Driver</th>
+                    <th>Constructor</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Bottas, Valtteri</td>
+                    <td>Mercedes</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Hamilton, Lewis</td>
+                    <td>Mercedes</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Verstappen, Max</td>
+                    <td>Red Bull</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Vettel, Sebastian</td>
+                    <td>Ferrari</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Leclerc, Charles</td>
+                    <td>Ferrari</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Magnussen, Kevin</td>
+                    <td>Haas F1 Team</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Hülkenberg, Nico</td>
+                    <td>Renault</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Räikkönen, Kimi</td>
+                    <td>Alfa Romeo</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Stroll, Lance</td>
+                    <td>Racing Point</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Kvyat, Daniil</td>
+                    <td>Toro Rosso</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Gasly, Pierre</td>
+                    <td>Red Bull</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Norris, Lando</td>
+                    <td>McLaren</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Pérez, Sergio</td>
+                    <td>Racing Point</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Albon, Alexander</td>
+                    <td>Toro Rosso</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Giovinazzi, Antonio</td>
+                    <td>Alfa Romeo</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Russell, George</td>
+                    <td>Williams</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Kubica, Robert</td>
+                    <td>Williams</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Grosjean, Romain</td>
+                    <td>Haas F1 Team</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Ricciardo, Daniel</td>
+                    <td>Renault</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Sainz, Carlos</td>
+                    <td>McLaren</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function openCity(evt, cityName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the link that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+
+</html>
