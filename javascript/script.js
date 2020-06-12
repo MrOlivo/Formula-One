@@ -16,7 +16,7 @@ const seasonResults = async (season) => {
         const {RaceTable} = data.MRData
 
         RaceTable.Races.forEach(race => {
-            //  Añada la badera del pais como fondo
+            //  Añada la bandera del pais como fondo
             const race_head = createCustomElements('', ['title'])
             const country = race.Circuit.Location.country.split(' ').join('_')
             race_head.style.backgroundImage = `url(flags/${country.toLowerCase()}.svg)`
