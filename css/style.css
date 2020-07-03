@@ -18,6 +18,10 @@ input {
     transition-duration: .2s;
 }
 
+label {
+    margin: auto;
+}
+
 #logo > img {
     display: block;
     width: 200px;
@@ -31,9 +35,15 @@ input {
 }
 
 #search {
+    margin: auto;
+    max-width: 300px;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
+}
+
+#enviar {
+    height: 2rem;
 }
 
 .item {
