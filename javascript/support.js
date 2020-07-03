@@ -17,12 +17,7 @@ const chargeSeasons = async () => {
     }
 };
 
-document
-    .getElementsByName('season-search')[0]
-    .addEventListener('keypress', (event) => {
-        let val = document.getElementsByName('season-search')[0].value;
-        if (event.keyCode === 13) {
-            event.preventDefault();
-            seasonResults(val);
-        }
-    });
+document.querySelector('#enviar').addEventListener('click', (event) => {
+    let val = document.getElementsByName('season-search')[0].value;
+    seasonResults(val);
+});
