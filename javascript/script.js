@@ -6,10 +6,12 @@ const seasonResults = async (season) => {
     const URL = `https://ergast.com/api/f1/${season}/results.json?limit=500&offset=0`;
 
     try {
+        const app = document.getElementById('app');
+        app.innerHTML = 'Cargando...';
+
         const res = await fetch(URL);
         const data = await res.json();
 
-        const app = document.getElementById('app');
         app.innerHTML = '';
 
         const { RaceTable } = data.MRData;
