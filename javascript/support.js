@@ -7,6 +7,8 @@ const chargeSeasons = async () => {
         const data_list = document.getElementById('seasons');
         const { Seasons } = data.MRData.SeasonTable;
 
+        Seasons.reverse();
+
         Seasons.forEach((element) => {
             let option = document.createElement('option');
             option.value = element.season;
