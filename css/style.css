@@ -46,15 +46,15 @@ label {
     height: 2rem;
 }
 
-.item {
+.card {
     background-color: whitesmoke;
-    width: 400px;
+    width: 500px;
     margin: 0.5em;
     transition-duration: .2s;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.30);
 }
 
-.item:hover {
+.card:hover {
     border: none;
     transform: translateY(-.2em);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.30);
@@ -63,6 +63,11 @@ label {
 table {
     font-size: 14px;
     margin: 0.875em auto;
+}
+
+td {
+    padding: 0 .5em;
+    border: 1px solid;
 }
 
 .title {
