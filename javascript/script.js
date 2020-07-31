@@ -3,7 +3,7 @@ const seasonResults = async (season) => {
         return;
     }
 
-    const URL = `https://ergast.com/api/f1/${season}/results.json?limit=500&offset=0`;
+    const URL = `https://ergast.com/api/f1/${season}/1/results.json`;
 
     try {
         const app = document.getElementById('app');
@@ -31,7 +31,7 @@ const seasonResults = async (season) => {
             const table = document.createElement('table');
             const thead = document.createElement('thead');
             thead.innerHTML =
-                '<tr> <th>Pos</th> <th>Driver</th> <th>Constructor</th> <th>Points</th> </tr>';
+                '<tr> <th>Pos</th> <th>Driver</th> <th>Constructor</th> <th>Status</th> <th>Points</th> </tr>';
             const tbody = document.createElement('tbody');
 
             //  Bucle de Resultados (race.Results) de cada Carrera (race) por
@@ -43,8 +43,8 @@ const seasonResults = async (season) => {
                                     result.Driver.givenName
                                 } ${result.Driver.familyName.toUpperCase()}</td>
                                 <td>${result.Constructor.name}</td>
+                                <td>${result.status}</td>
                                 <td>${result.points}</td>`;
-
                 tbody.appendChild(tr);
             });
 
@@ -53,7 +53,7 @@ const seasonResults = async (season) => {
             table.appendChild(tbody);
 
             //  Agrega el nombre le GP y la tabla con los resultados de la carrera
-            const item = createCustomElements('', ['item']);
+            const card = createCustomElements('', ['card']);
 
             //  Añadimos info como el nombre de la carrera y el circuito
             const gp = createCustomElements('', ['gp']);
@@ -62,13 +62,13 @@ const seasonResults = async (season) => {
                 createCustomElements(race.Circuit.circuitName, ['circuit'])
             );
 
-            //  Agregamos a item los elementos que lo componen
-            item.appendChild(race_head);
-            item.appendChild(gp);
-            item.appendChild(table);
+            //  Agregamos a card los elementos que lo componen
+            card.appendChild(race_head);
+            card.appendChild(gp);
+            card.appendChild(table);
 
-            //  Añadimos a APP el elemento item
-            app.appendChild(item);
+            //  Añadimos a APP el elemento card
+            app.appendChild(card);
         });
     } catch (error) {
         console.log(error);
