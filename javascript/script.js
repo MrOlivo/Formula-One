@@ -3,7 +3,7 @@ const seasonResults = async (season) => {
         return;
     }
 
-    const URL = `https://ergast.com/api/f1/${season}/1/results.json`;
+    const URL = `https://ergast.com/api/f1/${season}/results.json?limit=320`;
 
     try {
         const app = document.getElementById('app');
